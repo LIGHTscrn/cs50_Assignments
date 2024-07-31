@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<form action="/sell" class="row" method="post">
+
+<div class="row pt-4">
+    <select class=" col-4" name="symbol">
+        <option class = "text-center" disabled selected value="">Symbol</option>
+        {% for sell in to_sell %}
+    <option value = "{{ sell.shares }}" name = "share_name">{{ sell.shares }}</option>
+        {% endfor %}
+    </select>
+    <input class=" col-4" type="number" name="shares" value = 0 min="0" >
+    <button class="col-4 btn btn-primary" type="submit">SELL</button>
+
+</div>
+
+</form>
+
+{% endblock %}

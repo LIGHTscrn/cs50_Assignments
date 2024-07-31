@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function check(x) {
+                    document.addEventListener('click',function(event) {
+                        if (event.target.tagName === 'BUTTON') {
+                            if(x == 1) {
+                                let clickedButton = event.target;
+                                clickedButton.style.backgroundColor = "green";
+                                document.getElementById("status1").innerHTML = "Correct!";
+
+                                let allButton = document.querySelectorAll('button');
+                                allButton.forEach(function(button) {
+                                    if(button !== clickedButton)
+                                    {
+                                        button.style.backgroundColor = "#d9edff";
+                                    }
+                                });
+                            } else {
+                                let clickedButton = event.target;
+                                clickedButton.style.backgroundColor = "red";
+                                document.getElementById("status1").innerHTML = "Incorrect";
+
+                            let allButton = document.querySelectorAll('button');
+                            allButton.forEach(function(button) {
+                                if(button !== clickedButton) {
+                                    button.style.backgroundColor = "#d9edff";
+                                }
+                            });
+                        }
+                    }
+                });
+        }
+            let answer;
+            function CheckAnswer()
+            {
+                answer = document.getElementById("check").value;
+                console.log(answer);
+                if(answer == "Unity" || answer == "unity")
+                {
+                    document.getElementById("check").style.backgroundColor = "green";
+                    document.getElementById("status2").innerHTML = "Correct!";
+                }
+                else
+                {
+                    document.getElementById("check").style.backgroundColor = "red";
+                    document.getElementById("status2").innerHTML = "Incorrect";
+                }
+            }
+            document.addEventListener('DOMContentLoaded',function() {
+                document.getElementById("post").addEventListener('click',CheckAnswer);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                 <h3>What has four legs, a tail and a long head ?</h3>
+                 <button  onclick = "check(1)">girrafe</button>
+                 <button  onclick = "check(2)">rhino</button>
+                 <button  onclick = "check(3)">horse</button>
+                 <button  onclick = "check(4)">dog</button>
+                 <p id = "status1"></p>
+
+                 <h3> Who lives in a planet called earth</h3>
+                 <button  onclick = "check(4)">humans</button>
+                 <button  onclick = "check(2)">animals</button>
+                 <button  onclick = "check(3)">fishes</button>
+                 <button onclick = "check(1)">all of the above</button>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                 <h3>Who am i if i is the you in my soul?</h3>
+                 <input id = "check"><button id = "post">Check Answer</button>
+                 <p id = "status2"></p>
+            </div>
+        </div>
+    </body>
+</html>

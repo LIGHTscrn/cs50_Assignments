@@ -1,0 +1,5 @@
+key validity
+.//non repetetive
+.//non numeric
+.//case insensitive
+.//26 letters long

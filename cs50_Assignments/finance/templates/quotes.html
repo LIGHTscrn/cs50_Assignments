@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+ <form action="/quote" method="post">
+    <div>
+      <input  type="text" placeholder="SYMBOL" autofocus autocomplete="off" name="symbol">
+      <button type="submit" class="btn btn-primary">QUOTE</button>
+    </div>
+    {% if x and y is not none %}
+    <div>{{ x }} {{ y|usd }}</div>
+    {% endif %}
+ </form>
+
+{% endblock %}

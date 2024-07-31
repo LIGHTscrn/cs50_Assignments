@@ -1,0 +1,2 @@
+First i will find average of energy valence and danceabilty of all the songs then find the songs closest to it then recommend them that song
+I still dont know how to but somehow 

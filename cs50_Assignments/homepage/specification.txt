@@ -1,0 +1,4 @@
+HTML : div , header , main , ul , li , a , text , p ,button ,nav
+CSS  : display: , justify-content: , align-items: ,background-color: , width: ,border: ,cursor:
+JS   : used it to create a dropdown menu which displays its items when clicked and goes away when clicked again
+bootstrap: used it to style my divs and content insideyr

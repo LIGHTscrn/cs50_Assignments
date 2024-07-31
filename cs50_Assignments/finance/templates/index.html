@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block main %}
+
+<div class="row bg-dark">
+    <div class="col-4 bg-light">Symbol</div>
+    <div class="col-4 bg-light">Shares</div>
+    <div class="col-2 bg-light">Price</div>
+    <div class="col-2 bg-light">TOTAL</div>
+</div>
+
+{% for price in processed_price %}
+<div class="row bg-dark">
+    <div class="col-4 bg-light">{{ price.symbol }}</div>
+    <div class="col-4 bg-light">{{ price.number }}</div>
+    <div class="col-2 bg-light">{{ price.price|usd }}</div>
+    <div class="col-2 bg-light">{{ price.total|usd }}</div>
+</div>
+{% endfor %}
+<div class = "row pt-3">
+    <div class = "col-8"></div>
+    <div class = "col-2">CASH</div>
+    <div class = "col-2">{{ cash|usd }}</div>
+</div>
+<div class = "row pt-3">
+    <div class = "col-8"></div>
+    <div class = "col-2">TOTAL</div>
+    <div class = "col-2">{{ final|usd }}</div>
+</div>
+
+{% endblock %}

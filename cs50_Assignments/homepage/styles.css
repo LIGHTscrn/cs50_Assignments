@@ -1,0 +1,104 @@
+#header-main-a
+{
+    display: flex;
+    justify-content: flex-end;
+}
+.header_ddm_box
+{
+    background-color: black;
+    width: 70px;
+}
+.header_ddm_box button.hamburger_menu
+{
+    background: none;
+    background-color:black;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70px;
+    height: 45px;
+    padding: 4px;
+    align-items: center;
+}
+.header_ddm_box .menu
+{
+    display: none;
+}
+.header_ddm_box .menu.active
+{
+    display:block
+}
+.header_ddm_box ul
+{
+    list-style-type: none;
+    background-color: black;
+    padding:0;
+    margin:0;
+}
+.header_ddm_box a
+{
+    text-decoration:none;
+    color:white;
+    display:block;
+    padding:10px;
+}
+
+.header_main_div
+{
+    height: 45px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content:center;
+
+}
+.header_main_div ul
+{
+    list-style-type: none;
+    height:45px;
+    padding:0;
+    margin:0;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.header_main_div li
+{
+    color:white;
+    margin:0 10px;
+    cursor: default;
+    font-size:large;
+}
+
+.header_main button.btn
+{
+    background-color: black;
+    border: white;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.header_main .icons
+{
+    display: flex;
+    justify-content: center;
+}
+.btn i
+{
+    background-color: black;
+}
+.body
+{
+    background-color: black;
+}
+.bullet::before
+{
+    content:".";
+    color:white;
+    font-weight:bold;
+    display:inline-block;
+    width: 0.5em;
+    margin-left: -0.5em;
+}
